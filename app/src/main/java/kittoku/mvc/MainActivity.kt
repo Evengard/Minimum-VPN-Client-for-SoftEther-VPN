@@ -16,10 +16,11 @@ import com.microsoft.appcenter.crashes.Crashes;
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AppCenter.start(getApplication(), "d6f49385-b1d4-4f61-ba6c-39c8f3bc1bd2", Analytics.class, Crashes.class);
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         title = "${getText(R.string.app_name_short)}: ${BuildConfig.VERSION_NAME}"
-        AppCenter.start(getApplication(), "d6f49385-b1d4-4f61-ba6c-39c8f3bc1bd2", Analytics.class, Crashes.class);
+        
 
         object : FragmentStateAdapter(this) {
             private val homeFragment = HomeFragment()
