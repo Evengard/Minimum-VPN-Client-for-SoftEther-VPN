@@ -6,9 +6,8 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        def appCenterSdkVersion = '4.4.5'
-        implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
-        implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+        classpath 'com.android.tools.build:gradle:7.0.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
 
 
